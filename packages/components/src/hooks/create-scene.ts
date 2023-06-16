@@ -1,8 +1,9 @@
-import { Ref, ref, onMounted, onUnmounted, getCurrentInstance } from "vue";
+import { Ref, ref, onMounted, onUnmounted } from "vue";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { eventInObject } from "../utils";
 import { throttle } from "lodash-es";
+import { useParentElement } from "@vueuse/core";
 // 导入动画库
 import gsap from "gsap";
 import { useEdge } from "./use-edge";
@@ -217,10 +218,9 @@ export function createScene(
     const height = el.clientHeight;
     renderer.setSize(width, height);
   };
-  let el;
+  const e = useParentElement();
   onMounted(() => {
-    const app = getCurrentInstance();
-    el = app?.ctx.$el!;
+    let el = e.value?.querySelector(".render")!;
     el.appendChild(renderer.domElement);
     setSize(el);
 

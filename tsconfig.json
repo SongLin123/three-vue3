@@ -21,17 +21,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": [
-      "element-plus/global"
-    ],
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     },
     
   },
   "include": [
+    "element-plus/global",
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",

@@ -14,11 +14,9 @@
 
         </Transition>
         <Transition>
-            <div v-if="isfull" class="absolute left-0">left</div>
 
         </Transition>
         <Transition>
-            <div v-if="isfull" class="absolute right-0">right</div>
 
         </Transition>
 

@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "tsc": "vue-tsc ",
+    "build": " vite build",
     "preview": "vite preview",
     "dev:components": "vite-node ./scripts/dev-components.ts",
     "build:components": "vite-node ./scripts/build-module.ts"
   },
   "dependencies": {
     "@my/components": "workspace:^",
+    "@vueuse/core": "^10.1.2",
     "axios": "^1.4.0",
     "element-plus": "^2.3.6",
     "gsap": "^3.11.5",
