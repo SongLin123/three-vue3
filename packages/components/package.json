@@ -1,0 +1,20 @@
+{
+  "name": "@my/components",
+  "version": "0.0.1",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./esm/*": {
+      "import": "./dist/esm/*/index.mjs",
+      "types": "./dist/esm/*/index.d.ts"
+    },
+    "./css/*": "./dist/css/*"
+  }
+}
