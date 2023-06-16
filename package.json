@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "tsc": "vue-tsc ",
-    "build": " vite build",
     "preview": "vite preview",
     "dev:components": "vite-node ./scripts/dev-components.ts",
-    "build:components": "vite-node ./scripts/build-module.ts"
+    "build:components": "vite-node ./scripts/build-module.ts",
+    "build": "npm run build:components && vite build"
   },
   "dependencies": {
     "@my/components": "workspace:^",
